@@ -1,0 +1,5 @@
+# default.meta
+
+# Export configurations globally (system wide)
+[]
+export = system
