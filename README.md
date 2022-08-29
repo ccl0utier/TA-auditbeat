@@ -4,11 +4,11 @@
 
 ### About the Auditbeat Add-on for Splunk
 
-|                       |                                                         |
-|-----------------------|---------------------------------------------------------|
-| Version               | 1.0.0                                                   |
-| Vendor Products       | Elastic Auditbeat 8.3.x, 8.4.x+. Others are untested.   |
-| Visible in Splunk Web | No.                                                     |
+|                       |                                                                 |
+|-----------------------|-----------------------------------------------------------------|
+| Version               | 1.0.0                                                           |
+| Vendor Products       | Elastic Auditbeat 8.3.x/8.4.x and above. Others are untested.   |
+| Visible in Splunk Web | No.                                                             |
 
 The **Auditbeat Add-on for Splunk** collects audit event data from Elastic Auditbeat. You can install the Add-on on a forwarder to send data from Auditbeat to a Splunk Enterprise indexer or group of indexers. You can also use the add-on to provide data for other apps, such as Splunk Enterprise Security or Splunk App for PCI Compliance.
 
