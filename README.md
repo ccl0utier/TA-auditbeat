@@ -93,7 +93,7 @@ This table provides a quick reference for the compatibility of this add-on with 
 ## Configuration
 
 ### Auditbeat Configuration
-Configure your Auditbeat agent(s) as required. This add-on expects Auditbeat to log JSON events locally so that events can then picked up with a Splunk Universal Forwarder. 
+Configure your Auditbeat agent(s) as required. This add-on expects Auditbeat to log JSON events locally (`output.file`) so that events can then picked up with a Splunk Universal Forwarder. 
 
 Example configurations (note: the `file_integrity` module is enabled by default):
 
