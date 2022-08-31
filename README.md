@@ -160,7 +160,7 @@ disabled=0
 
 > Note: This works for all input stanzas, i.e. `monitor` inputs.
 
-# Configuration Change Tracking
+### Configuration Change Tracking
 
 The provided inputs included can optionally enable `fschange` [monitoring](https://docs.splunk.com/Splexicon:Filesystemchangemonitor) on the Auditbeat config file to fulfill potential audit requirements (configuration tampering, malicious intent, etc.).  
 
