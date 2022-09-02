@@ -191,6 +191,8 @@ For troubleshooting tips that you can apply to all add-ons, see [Troubleshoot ad
 
 This add-on was loosely based on the original [Add-on](https://splunkbase.splunk.com/app/4436/) built by [Daniel Wilson](https://splunkbase.splunk.com/apps/#/author/daniel333). I've reworked the sourcetypes and Common Information Model mappings to extend them significantly.
 
+Comments & suggestions for improvement are more than welcome!
+
  “Auditbeat” and "Beats" are trademarks of Elastic and they are in no way affiliated with this work.  Any rights, title and interest in these trademarks remains solely with them.
 
 > Author: Christian Cloutier <ccloutier@splunk.com>
