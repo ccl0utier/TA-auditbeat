@@ -1,5 +1,17 @@
 # Auditbeat Add-on for Splunk
 
+## Release Notes
+
+| Version               | Notes                                                                     |
+|-----------------------|---------------------------------------------------------------------------|
+| 1.0.0                 | Initial version                                                           |
+|                       |                                                                           |
+| 1.0.1                 | Minor fixes to some aliases and extractions                               |
+|                       | Addition of the `ran-command` actions to the`elastic:auditbeat:processes` | 
+|                       | sourcetype and corresponding CIM normalization                            |
+|                       | Addition of the `elastic:auditbeat:packages` sourcetype and corresponding |
+|                       | CIM normalization (Updates data model)                                    |
+
 ## Overview
 
 ### About the Auditbeat Add-on for Splunk
