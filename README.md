@@ -42,17 +42,19 @@ The **Auditbeat Add-on for Splunk** provides index-time, search-time and CIM nor
 
 Sourcetype `elastic:auditbeat:log` is then sourcetyped further based on the following fields (triggers) to the following CIM data models:
 
-| Trigger                    | Source Type                      | CIM Data Models                                  |
-|----------------------------|----------------------------------|--------------------------------------------------|
-| "action":"process_started" |  elastic:auditbeat:processes     | Endpoint.Processes                               |
-| "action":"process_stopped" |  elastic:auditbeat:processes     | Endpoint.Processes                               |
-| "action":"network_flow"    |  elastic:auditbeat:network_flow  | Network_Traffic                                  |
-| "action":"started-session" |  elastic:auditbeat:session_start | Network_Sessions.All_Sessions.Session_Start      |
-| "action":"ended-session"   |  elastic:auditbeat:session_end   | Network_Sessions.All_Sessions.Session_End        |
-| "action":"started-service" |  elastic:auditbeat:services      | Endpoint.Services                                |
-| "action":"stopped-service" |  elastic:auditbeat:services      | Endpoint.Services                                |
-| "action":"user_login"      |  elastic:auditbeat:user_login    | Authentication                                   |
-| "module":"file_integrity"  |  elastic:auditbeat:fim           | Endpoint.Filesystem                              |
+| Trigger                     | Source Type                     | CIM Data Models                                  |
+|-----------------------------|---------------------------------|--------------------------------------------------|
+| "action":"process_started"  | elastic:auditbeat:processes     | Endpoint.Processes                               |
+| "action":"process_stopped"  | elastic:auditbeat:processes     | Endpoint.Processes                               |
+| "action":"ran-command"      | elastic:auditbeat:processes     | Endpoint.Processes                               |
+| "action":"network_flow"     | elastic:auditbeat:network_flow  | Network_Traffic                                  |
+| "action":"started-session"  | elastic:auditbeat:session_start | Network_Sessions.All_Sessions.Session_Start      |
+| "action":"ended-session"    | elastic:auditbeat:session_end   | Network_Sessions.All_Sessions.Session_End        |
+| "action":"started-service"  | elastic:auditbeat:services      | Endpoint.Services                                |
+| "action":"stopped-service"  | elastic:auditbeat:services      | Endpoint.Services                                |
+| "action":"user_login"       | elastic:auditbeat:user_login    | Authentication                                   |
+| "action":"existing_package" | elastic:auditbeat:packages      | Updates                                          |
+| "module":"file_integrity"   | elastic:auditbeat:fim           | Endpoint.Filesystem                              |
 
 ### Compatibility
 
