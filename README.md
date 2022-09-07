@@ -2,15 +2,24 @@
 
 ## Release Notes
 
-| Version               | Notes                                                                     |
-|-----------------------|---------------------------------------------------------------------------|
-| 1.0.0                 | Initial version                                                           |
-|                       |                                                                           |
-| 1.0.1                 | Minor fixes to some aliases and extractions                               |
-|                       | Addition of the `ran-command` actions to the`elastic:auditbeat:processes` | 
-|                       | sourcetype and corresponding CIM normalization                            |
-|                       | Addition of the `elastic:auditbeat:packages` sourcetype and corresponding |
-|                       | CIM normalization (Updates data model)                                    |
+```
+Version               | Notes                                                                     |
+----------------------|---------------------------------------------------------------------------|
+1.0.0                 | Initial version                                                           |
+                      |                                                                           |
+1.0.1                 | Minor fixes to some aliases and extractions                               |
+                      | Addition of the ran-command actions to the elastic:auditbeat:processes    | 
+                      | sourcetype and corresponding CIM normalization                            |
+                      | Addition of the elastic:auditbeat:packages sourcetype and corresponding   |
+                      | CIM normalization (Updates data model)                                    |
+                      |                                                                           |                      
+1.0.2                 | Add existing_process to the elastic:auditbeat:processes sourcetype and    |                       
+                      | corresponding CIM normalization                                           |
+                      | Add existing_user to the elastic:auditbeat:users sourcetype and           |                       
+                      | corresponding CIM normalization (Inventory Data Model)                    |            
+                      | Add host to the elastic:auditbeat:host sourcetype and corresponding CIM   |                       
+                      | normalization (Inventory Data Model)                                      |        
+```
 
 ## Overview
 
@@ -39,7 +48,6 @@ The **Auditbeat Add-on for Splunk** provides index-time, search-time and CIM nor
 | elastic:auditbeat:log      | Main Auditbeat events                                   | n/a                |
 | elastic:auditbeat:config   | Auditbeat configuration file contents                   | n/a                |
 
-
 Sourcetype `elastic:auditbeat:log` is then sourcetyped further based on the following fields (triggers) to the following CIM data models:
 
 | Trigger                     | Source Type                     | CIM Data Models                                  |
@@ -47,6 +55,8 @@ Sourcetype `elastic:auditbeat:log` is then sourcetyped further based on the foll
 | "action":"process_started"  | elastic:auditbeat:processes     | Endpoint.Processes                               |
 | "action":"process_stopped"  | elastic:auditbeat:processes     | Endpoint.Processes                               |
 | "action":"ran-command"      | elastic:auditbeat:processes     | Endpoint.Processes                               |
+| "action":"executed"         | elastic:auditbeat:auditd:exec   | Endpoint.Processes                               |
+| "action":"existing_process" | elastic:auditbeat:processes     | Endpoint.Processes                               |
 | "action":"network_flow"     | elastic:auditbeat:network_flow  | Network_Traffic                                  |
 | "action":"started-session"  | elastic:auditbeat:session_start | Network_Sessions.All_Sessions.Session_Start      |
 | "action":"ended-session"    | elastic:auditbeat:session_end   | Network_Sessions.All_Sessions.Session_End        |
@@ -54,6 +64,8 @@ Sourcetype `elastic:auditbeat:log` is then sourcetyped further based on the foll
 | "action":"stopped-service"  | elastic:auditbeat:services      | Endpoint.Services                                |
 | "action":"user_login"       | elastic:auditbeat:user_login    | Authentication                                   |
 | "action":"existing_package" | elastic:auditbeat:packages      | Updates                                          |
+| "action":"existing_user"    | elastic:auditbeat:users         | Inventory.All_Inventory.User                     |
+| "action":"host"             | elastic:auditbeat:host          | Inventory.All_Inventory.OS                       |
 | "module":"file_integrity"   | elastic:auditbeat:fim           | Endpoint.Filesystem                              |
 
 ### Compatibility
@@ -187,9 +199,12 @@ This feature in Splunk is deprecated but still works as of writing this (Splunk 
 
 For troubleshooting tips that you can apply to all add-ons, see [Troubleshoot add-ons](http://docs.splunk.com/Documentation/AddOns/released/Overview/Troubleshootadd-ons) in Splunk Add-ons.
 
+Note that Auditbeat v8.4.0 will provide bad data in some cases, so I would suggest upgrading the 8.4.1 or using the 8.3.3 version.  See [here](https://github.com/elastic/beats/issues/32818) for details.
+
 ## Credits, References & Notes
 
 This add-on was loosely based on the original [Add-on](https://splunkbase.splunk.com/app/4436/) built by [Daniel Wilson](https://splunkbase.splunk.com/apps/#/author/daniel333). I've reworked the sourcetypes and Common Information Model mappings to extend them significantly.
+I plan on adding additional context around FIM via the `auditd` module data provided by Auditbeat.  Stay tuned!
 
 Comments & suggestions for improvement are more than welcome!
 
