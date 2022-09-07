@@ -13,12 +13,15 @@ Version               | Notes                                                   
                       | Addition of the elastic:auditbeat:packages sourcetype and corresponding   |
                       | CIM normalization (Updates data model)                                    |
                       |                                                                           |                      
-1.0.2                 | Add existing_process to the elastic:auditbeat:processes sourcetype and    |                       
-                      | corresponding CIM normalization                                           |
-                      | Add existing_user to the elastic:auditbeat:users sourcetype and           |                       
-                      | corresponding CIM normalization (Inventory Data Model)                    |            
-                      | Add host to the elastic:auditbeat:host sourcetype and corresponding CIM   |                       
-                      | normalization (Inventory Data Model)                                      |        
+1.0.2                 | Add event action "existing_process" to the elastic:auditbeat:processes    |                       
+                      | sourcetype and corresponding CIM normalization                            |
+                      | Add event action "existing_user" to the elastic:auditbeat:users           |                       
+                      | sourcetype and corresponding CIM normalization (Inventory Data Model)     |            
+                      | Add event action "host" to the elastic:auditbeat:host sourcetype and      |                       
+                      | corresponding CIM normalization (Inventory Data Model)                    |
+                      | Add event action "executed" (auditd) to the elastic:auditbeat:auditd:exec |                       
+                      | sourcetype and corresponding CIM normalization (Endpoint Data Model)      |
+                      | Fixed typos                                                               |                                                                  
 ```
 
 ## Overview
