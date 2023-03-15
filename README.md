@@ -30,7 +30,7 @@ Version               | Notes                                                   
 
 |                       |                                                                 |
 |-----------------------|-----------------------------------------------------------------|
-| Version               | 1.0.0                                                           |
+| Version               | 1.0.2                                                           |
 | Vendor Products       | Elastic Auditbeat 8.3.x/8.4.x and above. Others are untested.   |
 | Visible in Splunk Web | No.                                                             |
 
