@@ -202,7 +202,7 @@ This feature in Splunk is deprecated but still works as of writing this (Splunk 
 
 For troubleshooting tips that you can apply to all add-ons, see [Troubleshoot add-ons](http://docs.splunk.com/Documentation/AddOns/released/Overview/Troubleshootadd-ons) in Splunk Add-ons.
 
-Note that Auditbeat v8.4.0 will provide bad data in some cases, so I would suggest upgrading the 8.4.1 or using the 8.3.3 version.  See [here](https://github.com/elastic/beats/issues/32818) for details.
+Note that Auditbeat v8.4.0 will provide bad data in some cases, so I would suggest upgrading to the 8.4.1 (or later) or using the 8.3.3 version.  See [here](https://github.com/elastic/beats/issues/32818) for details.
 
 ## Credits, References & Notes
 
