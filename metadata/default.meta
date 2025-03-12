@@ -3,3 +3,6 @@
 # Export configurations globally (system wide)
 []
 export = system
+
+[]
+access = read : [ * ], write : [ admin, power ]
